@@ -11,6 +11,7 @@ import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
+from sklearn import tree
 import matplotlib.pyplot as plt
 
 # Carregar o arquivo CSV
@@ -25,6 +26,7 @@ X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=
 
 # Criar o regressor da árvore de decisão
 regressor = DecisionTreeRegressor(criterion='squared_error', max_depth=3, random_state=42)
+
 
 # Treinar o modelo
 regressor.fit(X_train, y_train)
